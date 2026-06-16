@@ -1,0 +1,9 @@
+syntax = "proto3";
+package familychat;
+
+message P2PSignal {
+  string call_id = 1;
+  string from_user_id = 2;
+  string to_user_id = 3;
+  string sdp = 4;
+}

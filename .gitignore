@@ -1,12 +1,18 @@
 # Gradle files
 .gradle/
 build/
+node_modules/
+coverage/
+dist/
 
 # Local configuration file (sdk path, etc)
 local.properties
 
 # Log/OS Files
 *.log
+.env
+server/uploads/*
+!server/uploads/.gitkeep
 
 # Android Studio generated files and folders
 captures/

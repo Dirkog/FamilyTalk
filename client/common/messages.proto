@@ -1,0 +1,10 @@
+syntax = "proto3";
+package familychat;
+
+message ChatMessage {
+  string id = 1;
+  string chat_id = 2;
+  string sender_id = 3;
+  string encrypted_payload = 4;
+  string created_at = 5;
+}

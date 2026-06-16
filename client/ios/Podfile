@@ -1,0 +1,4 @@
+platform :ios, '14.0'
+target 'FamilyChat' do
+  use_frameworks!
+end

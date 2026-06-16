@@ -1,0 +1,6 @@
+module.exports = {
+  iceServers: [
+    { urls: "stun:stun.l.google.com:19302" }
+  ],
+  useTurn: false
+};
