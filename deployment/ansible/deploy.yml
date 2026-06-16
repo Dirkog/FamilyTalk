@@ -1,0 +1,4 @@
+---
+- hosts: familychat
+  tasks:
+    - debug: msg="Deploy Family Chat"

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package familychat;
+
+message KeyEnvelope {
+  string chat_id = 1;
+  string user_id = 2;
+  string encrypted_key = 3;
+}

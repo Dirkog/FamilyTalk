@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: familychat
+      POSTGRES_PASSWORD: familychat
+      POSTGRES_DB: familychat
+    ports: ["5432:5432"]
+  server:
+    build:
+      context: ../..
+      dockerfile: deployment/docker/Dockerfile
+    env_file: ../../.env.example
+    ports: ["3000:3000"]
+    depends_on: [postgres]

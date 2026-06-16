@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS voice_calls (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  chat_id UUID NOT NULL REFERENCES chats(id) ON DELETE CASCADE,
+  caller_id UUID REFERENCES users(id) ON DELETE SET NULL,
+  status TEXT NOT NULL DEFAULT 'ringing',
+  started_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  ended_at TIMESTAMPTZ
+);
