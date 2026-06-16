@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-    "test": "node --test \"server/tests/**/*.test.js\"",
+    "test": "find server/tests -name \"*.test.js\" -print0 | xargs -0 node --test",
     "lint": "node --check server/server.js && node --check server/app.js"
   },
   "dependencies": {
